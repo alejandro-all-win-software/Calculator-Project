@@ -14,7 +14,6 @@ class Calculator_ProjectUITests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        
     }
 
     func testSumTwoNumbers() throws {
@@ -81,4 +80,78 @@ class Calculator_ProjectUITests: XCTestCase {
         XCTAssertEqual(expectedResult, textViewText)
     }
     
+    func testChangeSignOfTheNumber() {
+        let app = XCUIApplication()
+        app.launch()
+        //Given
+        let expectedResult = "1.0"
+        //When
+        app.buttons["5"].tap()
+        app.buttons["+/-"].tap()
+        app.buttons["+"].tap()
+        app.buttons["6"].tap()
+        app.buttons["="].tap()
+        let textViewText = app.descendants(matching: .textView).descendants(matching: .textView).element.label
+        //Then
+        XCTAssertEqual(expectedResult, textViewText)
+    }
+    
+    func testSumDecimalNumber() {
+        let app = XCUIApplication()
+        app.launch()
+        //Given
+        let expectedResult = "13.1"
+        //When
+        app.buttons["5"].tap()
+        app.buttons["."].tap()
+        app.buttons["6"].tap()
+        app.buttons["+"].tap()
+        app.buttons["7"].tap()
+        app.buttons["."].tap()
+        app.buttons["5"].tap()
+        app.buttons["="].tap()
+        let textViewText = app.descendants(matching: .textView).descendants(matching: .textView).element.label
+        //Then
+        XCTAssertEqual(expectedResult, textViewText)
+    }
+    
+    func testDeleteNumbersAndSumAfter() {
+        let app = XCUIApplication()
+        app.launch()
+        //Given
+        let expectedResult = "134.0"
+        //When
+        app.buttons["8"].tap()
+        app.buttons["9"].tap()
+        app.buttons["4"].tap()
+        app.buttons["5"].tap()
+        app.buttons["backspace"].tap()
+        app.buttons["backspace"].tap()
+        app.buttons["+"].tap()
+        app.buttons["4"].tap()
+        app.buttons["5"].tap()
+        app.buttons["3"].tap()
+        app.buttons["backspace"].tap()
+        app.buttons["="].tap()
+        let textViewText = app.descendants(matching: .textView).descendants(matching: .textView).element.label
+        //Then
+        XCTAssertEqual(expectedResult, textViewText)
+    }
+    
+    func testSumThreeNumbers() {
+        let app = XCUIApplication()
+        app.launch()
+        //Given
+        let expectedResult = "17.0"
+        //When
+        app.buttons["9"].tap()
+        app.buttons["+"].tap()
+        app.buttons["5"].tap()
+        app.buttons["+"].tap()
+        app.buttons["3"].tap()
+        app.buttons["="].tap()
+        let textViewText = app.descendants(matching: .textView).descendants(matching: .textView).element.label
+        //Then
+        XCTAssertEqual(expectedResult, textViewText)
+    }
 }

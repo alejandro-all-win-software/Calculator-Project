@@ -34,9 +34,7 @@ class ViewController: UIViewController {
     }
     
     func setUpMathOperation() {
-        if secondNumber == 0 {
-            secondNumber = Float(textView.text) ?? 0
-        }
+        secondNumber = Float(textView.text) ?? 0
         switch signOfTheOperation {
         case "+":
             result = firstNumber + secondNumber
@@ -210,22 +208,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func result(_ sender: Any) {
-        if secondNumber == 0 {
-            secondNumber = Float(textView.text) ?? 0
-        }
+        secondNumber = Float(textView.text) ?? 0
         switch signOfTheOperation {
         case "+":
             result = firstNumber + secondNumber
+            firstNumber = 0
             textView.text = String(result)
         case "-":
             result = firstNumber - secondNumber
+            firstNumber = 0
             textView.text = String(result)
         case "x":
             result = firstNumber * secondNumber
+            firstNumber = 0
             textView.text = String(result)
         case "÷":
             if secondNumber != 0 {
                 result = firstNumber / secondNumber
+                firstNumber = 0
                 textView.text = String(result)
             } else {
                 textView.text = numberDivideByZero
