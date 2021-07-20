@@ -14,10 +14,6 @@
 # update_fastlane
 
 lane :tests do
-  run_tests(scheme: "Calculator Project")
-end
-
-lane :tests1 do
   run_tests(devices: ["iPhone 11"],
             scheme: "Calculator Project")
 end
