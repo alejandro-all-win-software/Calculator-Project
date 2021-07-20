@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='Calculator ProjectUITests.xctest' tests='15' failures='0'>
+  <testsuite name='Calculator_ProjectTests.Calculator_ProjectTests' tests='4' failures='0'>
+    <testcase classname='Calculator_ProjectTests.Calculator_ProjectTests' name='testSetUpDivide' time='0.012'/>
+    <testcase classname='Calculator_ProjectTests.Calculator_ProjectTests' name='testSetUpMultiply' time='0.003'/>
+    <testcase classname='Calculator_ProjectTests.Calculator_ProjectTests' name='testSetUpSubtract' time='0.005'/>
+    <testcase classname='Calculator_ProjectTests.Calculator_ProjectTests' name='testSetUpSum' time='0.003'/>
+  </testsuite>
+  <testsuite name='Calculator_ProjectUITests.Calculator_ProjectUITests' tests='11' failures='0'>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testChangeSignOfTheNumber' time='5.713'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testDeleteNumbersAndSumAfter' time='10.543'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testDivideThreeNumbers' time='7.965'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testDivideTwoNumbers' time='5.917'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testMultiplyThreeNumbers' time='7.312'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testMultiplyTwoNumbers' time='7.381'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSubtractThreeNumbers' time='7.294'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSubtractTwoNumbers' time='6.577'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSumDecimalNumber' time='8.746'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSumThreeNumbers' time='7.376'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSumTwoNumbers' time='5.858'/>
+  </testsuite>
+</testsuites>
