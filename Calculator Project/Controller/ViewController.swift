@@ -33,8 +33,10 @@ class ViewController: UIViewController {
         }
     }
     
-    func setUpMathOperation() {
-        secondNumber = Float(textView.text) ?? 0
+    func setUpMathOperation(textView: UITextView) {
+        if secondNumber == 0 {
+            secondNumber = Float(textView.text) ?? 0
+        }
         switch signOfTheOperation {
         case "+":
             result = firstNumber + secondNumber
@@ -156,7 +158,7 @@ class ViewController: UIViewController {
                 firstNumber = Float(textView.text) ?? 0
                 textView.text = "+"
             } else {
-                setUpMathOperation()
+                setUpMathOperation(textView: textView)
                 textView.text = "+"
             }
         }
@@ -171,7 +173,7 @@ class ViewController: UIViewController {
                 firstNumber = Float(textView.text) ?? 0
                 textView.text = "-"
             } else {
-                setUpMathOperation()
+                setUpMathOperation(textView: textView)
                 textView.text = "-"
             }
         }
@@ -186,7 +188,7 @@ class ViewController: UIViewController {
                 firstNumber = Float(textView.text) ?? 0
                 textView.text = "x"
             } else {
-                setUpMathOperation()
+                setUpMathOperation(textView: textView)
                 textView.text = "x"
             }
         }
@@ -201,7 +203,7 @@ class ViewController: UIViewController {
                 firstNumber = Float(textView.text) ?? 0
                 textView.text = "÷"
             } else {
-                setUpMathOperation()
+                setUpMathOperation(textView: textView)
                 textView.text = "÷"
             }
         }

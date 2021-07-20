@@ -11,9 +11,11 @@ import XCTest
 class Calculator_ProjectTests: XCTestCase {
 
     var sut: ViewController?
+    var textView: UITextView?
     
     override func setUpWithError() throws {
         sut = ViewController()
+        textView = sut?.textView
     }
 
     override func tearDownWithError() throws {
@@ -31,7 +33,7 @@ class Calculator_ProjectTests: XCTestCase {
         sut?.signOfTheOperation = "+"
         let expectedResult: Float = 20
         //When
-        sut?.setUpMathOperation()
+        sut?.setUpMathOperation(textView: textView ?? UITextView())
         //Then
         XCTAssertEqual(expectedResult, sut?.result ?? 0)
     }
@@ -43,7 +45,7 @@ class Calculator_ProjectTests: XCTestCase {
         sut?.signOfTheOperation = "-"
         let expectedResult: Float = 5
         //When
-        sut?.setUpMathOperation()
+        sut?.setUpMathOperation(textView: textView ?? UITextView())
         //Then
         XCTAssertEqual(expectedResult, sut?.result ?? 0)
     }
@@ -55,7 +57,7 @@ class Calculator_ProjectTests: XCTestCase {
         sut?.signOfTheOperation = "x"
         let expectedResult: Float = 28
         //When
-        sut?.setUpMathOperation()
+        sut?.setUpMathOperation(textView: textView ?? UITextView())
         //Then
         XCTAssertEqual(expectedResult, sut?.result ?? 0)
     }
@@ -67,7 +69,7 @@ class Calculator_ProjectTests: XCTestCase {
         sut?.signOfTheOperation = "÷"
         let expectedResult: Float = 2
         //When
-        sut?.setUpMathOperation()
+        sut?.setUpMathOperation(textView: textView ?? UITextView())
         //Then
         XCTAssertEqual(expectedResult, sut?.result ?? 0)
     }
