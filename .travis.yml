@@ -1,4 +1,4 @@
-language: ruby
-rvm:
- - 2.2
- -jruby
+language: objective-c
+xcode_project: Calculator Project.xcodeproj
+xcode_scheme: Calculator Project
+xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11
