@@ -13,7 +13,15 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-lane :tests do
+lane :tests do |options|
   run_tests(devices: ["iPhone 11"],
-            scheme: "Calculator Project")
+  scheme: options[:schemeToChange])
+end
+
+lane :build do
+    build_app(
+    scheme: "Calculator Project",
+    export_method: "development",
+    export_options: { compileBitcode: false }
+  )
 end

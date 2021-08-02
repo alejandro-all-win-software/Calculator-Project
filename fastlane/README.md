@@ -20,9 +20,9 @@ or alternatively using `brew install fastlane`
 fastlane tests
 ```
 
-### tests1
+### build
 ```
-fastlane tests1
+fastlane build
 ```
 
 
