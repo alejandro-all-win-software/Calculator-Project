@@ -1,2 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites tests='0' failures='0'/>
+<testsuites name='Calculator ProjectUITests.xctest' tests='11' failures='0'>
+  <testsuite name='Calculator_ProjectUITests.Calculator_ProjectUITests' tests='11' failures='0'>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testChangeSignOfTheNumber' time='7.587'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testDeleteNumbersAndSumAfter' time='11.200'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testDivideThreeNumbers' time='8.397'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testDivideTwoNumbers' time='6.043'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testMultiplyThreeNumbers' time='7.708'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testMultiplyTwoNumbers' time='7.545'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSubtractThreeNumbers' time='7.355'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSubtractTwoNumbers' time='6.566'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSumDecimalNumber' time='8.730'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSumThreeNumbers' time='7.292'/>
+    <testcase classname='Calculator_ProjectUITests.Calculator_ProjectUITests' name='testSumTwoNumbers' time='5.797'/>
+  </testsuite>
+</testsuites>
