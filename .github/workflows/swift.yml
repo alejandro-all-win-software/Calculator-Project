@@ -1,26 +1,16 @@
 name: Swift
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
   create:
     branches: [ master ]
     
 jobs:    
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
+  test:
+    name: Test
+    runs-on: macos-lasted
 
     steps:
     - name: Checkout Repo
       uses: actions/checkout@master
-    - name: Install Dependencies
-      run: npm install
-    - name: Distribute to AppCenter
-      uses: akinncar/appcenter-distribute-action@master
-      with:
-        args: stores publish  --file /path/to/file.aab --store Production --app AlejandroVladimir/Calculator-Project --release-notes "oh"
-      env:
-        APPCENTER_ACCESS_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
