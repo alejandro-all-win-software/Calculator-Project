@@ -1,5 +1,6 @@
 eval $(ssh-agent -s)
-echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+ssh-keygen -t rsa -b 4096 -C "alejandro@all-win.software" -f nc -N """"
+echo $SSH_PRIVATE_KEY | tr -d '\r' | ssh-add nc
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 ssh-keyscan github.com >> ~/.ssh/known_hosts
