@@ -1,5 +1,4 @@
-'which ssh-agent || ( apt-get update -y && apt-get install openssh-client git -y )'
-echo {SSH_PRIVATE_KEY} |tr -d '\r' | ssh-add - > /dev/null
+tr -d '\r' | ssh-add {SSH_PRIVATE_KEY}
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 ssh-keyscan github.com >> ~/.ssh/known_hosts
