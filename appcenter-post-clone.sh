@@ -4,8 +4,6 @@ sed 's/.*/hola/g' sshkey.pub > sshkey.pub
 sed 's/.*/hola/g' sshkey > sshkey
 echo -e "$SSH_PRIVATE_KEY" > sshkey
 echo "$SSH_PUBLIC_KEY" > sshkey.pub
-cat sshkey
-cat sshkey.pub
 ssh-add sshkey
 git config --global user.name AlejandroVladimir
 git config --global user.email alejandro@all-win.software
