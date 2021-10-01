@@ -2,7 +2,7 @@ eval "$(ssh-agent -s)"
 mkdir -p ~/.ssh
 cd ~/.ssh/
 touch sshkey
-echo $SSH_PRIVATE_KEY > sshkey
+echo "$SSH_PRIVATE_KEY" > sshkey
 chown $(whoami) ~/.ssh/sshkey
 chmod 600 ~/.ssh/sshkey
 ssh-add sshkey
