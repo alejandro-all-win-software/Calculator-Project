@@ -1,6 +1,8 @@
-eval $(ssh-agent -s)
-ssh-keygen -t rsa -b 4096 -C "alejandro@all-win.software" -f nc -N """"
-echo $SSH_PRIVATE_KEY | tr -d '\r' | ssh-add nc
+ni sshkey.pub
+$File = "sshkey.pub"
+write "ssh" > sshkey.pub
+(Get-Content $File).replace('ssh', '$SSH_PRIVATE_KEY') | Set-Content $File
+echo $SSH_PRIVATE_KEY | tr -d '\r' | ssh-add sshkey
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 ssh-keyscan github.com >> ~/.ssh/known_hosts
