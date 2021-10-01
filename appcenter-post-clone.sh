@@ -1,3 +1,4 @@
+eval "$(ssh-agent -s)"
 touch ssh
 echo $SSH_PRIVATE_KEY > ssh
 ssh-add ssh
