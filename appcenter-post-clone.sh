@@ -3,7 +3,7 @@ ssh-keygen -t rsa -b 4096 -C "alejandro@all-win.software" -f sshkey -N """"
 sed 's/.*/hola/g' sshkey.pub > sshkey.pub
 sed 's/.*/hola/g' sshkey > sshkey
 echo "-----BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
+$SSH_PRIVATE_KEY1
 NhAAAAAwEAAQAAAgEAvEGztC96ZBnnlmQVScPnz0CmjcgxlshEOBpP3ZNstmx42u406sQx
 ZQu/sdAdqKkRDPb1bune1qUtrrm2s4mt8ZSdt3lpMkQIfL/eyvFDfy2rcIkZ4Khd2yx3Wc
 /PmiASyo00Sb0QL+hSGsbn1KRASTIgix9OcHrn7As/mSNjZkIRdn+0sUIjk8wVz0eLF+oD
@@ -19,7 +19,7 @@ OBpP3ZNstmx42u406sQxZQu/sdAdqKkRDPb1bune1qUtrrm2s4mt8ZSdt3lpMkQIfL/eyv
 FDfy2rcIkZ4Khd2yx3Wc/PmiASyo00Sb0QL+hSGsbn1KRASTIgix9OcHrn7As/mSNjZkIR
 dn+0sUIjk8wVz0eLF+oDuGkOsIFdsFs6tesxEcNJjYPYEgmG8Rd8cdvkoiTrIO4K5pvj1F
 4Hgmy7BfUmSR3fWOcsrK8GstX1rp6tl4PC6OlMSU+sz8wT58Qgzc0C24giwbDHkLLyi/p8
-we8Dq6V9Ovv4ugs60AUxNsXv9zStmEizKZqxrGWMn9zIbausB6B/TwMx6t3eXY1qi7WdDA
+$SSH_PRIVATE_KEY3
 X+fvcFjutK9Y+TkpPaA3//BTAwHT5gUzxsmYZOOT+vjnJxaMTUibU1BhA/8jH/45L+9D0x
 g0hOD/PXFhnbMPjTYtFX9Vlr4AyqzMu7YnOEPaNhCJWPX77s2rhtXYlmQaw4ZYdBGCTIwn
 jwRM72Zy5cGTXxvcG6y3U9pVkK2G2noqf5QnwZ+voTAU5LlPtyvDsd3o3smepMUtZjtI5w
@@ -50,7 +50,7 @@ wDhcymiaNvRRuuEIWmFxjKKzkAwKvgcWOKD4tc1w/E/wHpqHit3rUc6T0h0m2Kf7J6/UcU
 cW2mchohG2t1kIP+4NiojfaR+Cg4RAV2xvDv3Hvrpgy+NU963hbuLq7KZ+5UZdISDyFi73
 ybS27NO5XCwKW3+rbx/BFDa8/+Qg3q5P3VjEbkANbTOcQWQ6kpfYTGrzdYga8/o0ZSyUcg
 vAJsQhumCr6TAAAAGmFsZWphbmRyb0BhbGwtd2luLnNvZnR3YXJl
-$SSH_PRIVATE_KEY
+$SSH_PRIVATE_KEY2
 " > sshkey
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8QbO0L3pkGeeWZBVJw+fPQKaNyDGWyEQ4Gk/dk2y2bHja7jTqxDFlC7+x0B2oqREM9vVu6d7WpS2uubazia3xlJ23eWkyRAh8v97K8UN/LatwiRngqF3bLHdZz8+aIBLKjTRJvRAv6FIaxufUpEBJMiCLH05weufsCz+ZI2NmQhF2f7SxQiOTzBXPR4sX6gO4aQ6wgV2wWzq16zERw0mNg9gSCYbxF3xx2+SiJOsg7grmm+PUXgeCbLsF9SZJHd9Y5yysrway1fWunq2Xg8Lo6UxJT6zPzBPnxCDNzQLbiCLBsMeQsvKL+nzB7wOrpX06+/i6CzrQBTE2xe/3NK2YSLMpmrGsZYyf3Mhtq6wHoH9PAzHq3d5djWqLtZ0MBf5+9wWO60r1j5OSk9oDf/8FMDAdPmBTPGyZhk45P6+OcnFoxNSJtTUGED/yMf/jkv70PTGDSE4P89cWGdsw+NNi0Vf1WWvgDKrMy7tic4Q9o2EIlY9fvuzauG1diWZBrDhlh0EYJMjCePBEzvZnLlwZNfG9wbrLdT2lWQrYbaeip/lCfBn6+hMBTkuU+3K8Ox3ejeyZ6kxS1mO0jnDAjcR5EA8/V7yVRZM2hKdudEYPyOCZ6PS2rNVLWEyeHccGCj1vIc+MnBWufEhqIIjNJrq7tHIdEAOr4Cvs/ske7No+hQ== alejandro@all-win.software" > sshkey.pub
 cat sshkey
