@@ -25,3 +25,22 @@ lane :build do
     export_options: { compileBitcode: false }
   )
 end
+
+lane :testlab do
+  sh()
+
+  firebase_test_lab_ios_xctest(
+    gcp_project: '',
+    app_path: '~/build_products.zip',
+    skip_validation: true,
+    oath_key_file_path: '~/firebase-key.json',
+    devices: [
+      {
+        ios_model_id: 'iphone8',
+        ios_version_id: '14.7',
+        locale: 'en_US',
+        orientation: 'portrait'
+      }
+    ]
+  )
+end
