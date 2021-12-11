@@ -27,10 +27,10 @@ lane :build do
 end
 
 lane :testlab do
-  sh()
+  sh("cd Users/runner/Library/Developer/Xcode/DerivedData/Calculator_Project-csmqofdtarftncdelerzvhiigscb/Build/Intermediates.noindex/ArchiveIntermediates/Calculator\ Project/InstallationBuildProductsLocation/Applications/ && zip -r ~/build_products.zip .")
 
   firebase_test_lab_ios_xctest(
-    gcp_project: '',
+    gcp_project: 'calculator-project-50cf6',
     app_path: '~/build_products.zip',
     skip_validation: true,
     oath_key_file_path: '~/firebase-key.json',
