@@ -2,5 +2,5 @@
 set -e
 echo "Running Steps Post Build"
 
-echo -e "$FIREBASE_KEY" > ~/firebase-key.json
+echo "$FIREBASE_KEY" | base64 --decode | > ~/firebase-key.json
 bundle exec fastlane testlab
