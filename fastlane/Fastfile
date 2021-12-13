@@ -32,7 +32,7 @@ lane :testlab do
   firebase_test_lab_ios_xctest(
     gcp_project: 'calculator-project-50cf6',
     app_path: '~/build_products.zip',
-    oath_key_file_path: '~/firebase-key.json',
+    oauth_key_file_path: '~/firebase-key.json',
     devices: [
       {
         ios_model_id: 'iphone8',
