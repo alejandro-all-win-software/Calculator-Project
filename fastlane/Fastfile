@@ -27,7 +27,7 @@ lane :build do
 end
 
 lane :testlab do
-  sh("cd Library/Developer/Xcode/DerivedData/Calculator_Project-csmqofdtarftncdelerzvhiigscb/Build/Products/ && zip -r ~/build_products.zip .")
+  sh("cd work/1/a/build/ && zip -r ~/build_products.zip *")
 
   firebase_test_lab_ios_xctest(
     gcp_project: 'calculator-project-50cf6',
