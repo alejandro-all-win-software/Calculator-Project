@@ -32,7 +32,6 @@ lane :testlab do
   firebase_test_lab_ios_xctest(
     gcp_project: 'calculator-project-50cf6',
     app_path: '~/build_products.zip',
-    skip_validation: true,
     oath_key_file_path: '~/firebase-key.json',
     devices: [
       {
